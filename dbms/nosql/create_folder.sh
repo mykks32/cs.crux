@@ -7,8 +7,8 @@ read -p "Enter the folder name you want to create: " folder_name
 mkdir -p "$folder_name"
 
 # Create empty files inside the folders
-touch "$folder_name/insert.json"
-touch "$folder_name/solution.json"
+touch "$folder_name/insert.js"
+touch "$folder_name/solution.js"
 
 touch "$folder_name/question.md"
 
