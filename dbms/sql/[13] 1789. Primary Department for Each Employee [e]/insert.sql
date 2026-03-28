@@ -1,0 +1,9 @@
+-- Insert into employee table
+INSERT INTO employee ( employee_id, department_id, primary_flag )
+VALUES ( 1, 1, 'N' ),
+       ( 2, 1, 'Y' ),
+       ( 2, 2, 'N' ),
+       ( 3, 3, 'N' ),
+       ( 4, 2, 'N' ),
+       ( 4, 3, 'Y' ),
+       ( 4, 4, 'N' )
