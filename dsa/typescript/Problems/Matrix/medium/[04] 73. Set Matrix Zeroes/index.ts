@@ -38,13 +38,15 @@ class SetMatrixZeroes {
 	 */
 	public setZeroes( matrix: number[][] ): void {
 		// @ts-ignore
-		const rows = new Set();
+		const rows = new Set<number>();
+
 		// @ts-ignore
-		const cols = new Set();
+		const cols = new Set<number>();
 
 		const m = matrix.length;
 		const n = matrix[0].length;
 
+		// Step 1: Identify rows and columns to be zeroed
 		for (let i = 0; i < m; i++) {
 			for (let j = 0; j < n; j++) {
 				if (matrix[i][j] === 0) {
@@ -54,6 +56,7 @@ class SetMatrixZeroes {
 			}
 		}
 
+		// Step 2: Update matrix based on recorded rows and columns
 		for (let i = 0; i < m; i++) {
 			for (let j = 0; j < n; j++) {
 				if (rows.has(i) || cols.has(j)) {
@@ -61,7 +64,7 @@ class SetMatrixZeroes {
 				}
 			}
 		}
-	};
+	}
 }
 
 /**
